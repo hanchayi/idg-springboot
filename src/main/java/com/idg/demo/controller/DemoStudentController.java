@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.idg.demo.domain.DemoStudent;
-import com.idg.demo.service.IUserDemoStudent;
+import com.idg.demo.service.IDemoStudent;
 
 @RestController
 public class DemoStudentController {
 
 	@Autowired
-	private IUserDemoStudent userDemoStudent;
+	private IDemoStudent userDemoStudent;
 
 	@GetMapping("/demo-students")
 	public List<DemoStudent> getDemoStudents() {
