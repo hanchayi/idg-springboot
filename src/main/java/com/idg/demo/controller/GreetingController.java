@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.idg.demo.domain.Greeting;
 import com.idg.demo.domain.User;
-import com.idg.demo.mapper.UserMapper;
 import com.idg.demo.service.IUserService;
 
 @RestController
