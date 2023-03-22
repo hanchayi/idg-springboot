@@ -12,13 +12,13 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.idg.demo.domain.DemoScore;
 import com.idg.demo.domain.dto.ScorePageQry;
 import com.idg.demo.domain.vo.StudentScoreVO;
-import com.idg.demo.service.IDemoScore;
+import com.idg.demo.service.IDemoScoreService;
 
 @RestController
 public class DemoScoreController {
 
 	@Autowired
-	private IDemoScore demoScore;
+	private IDemoScoreService demoScore;
 
 	@GetMapping("/demo-scores")
 	public List<DemoScore> getDemoStudents() {

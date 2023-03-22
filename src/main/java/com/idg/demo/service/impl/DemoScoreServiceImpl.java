@@ -12,11 +12,11 @@ import com.idg.demo.domain.DemoScore;
 import com.idg.demo.domain.dto.ScorePageQry;
 import com.idg.demo.domain.vo.StudentScoreVO;
 import com.idg.demo.mapper.DemoScoreMapper;
-import com.idg.demo.service.IDemoScore;
+import com.idg.demo.service.IDemoScoreService;
 
 @Service
 @Primary
-public class DemoScoreServiceImpl extends ServiceImpl<DemoScoreMapper,DemoScore> implements IDemoScore  {
+public class DemoScoreServiceImpl extends ServiceImpl<DemoScoreMapper,DemoScore> implements IDemoScoreService  {
 
     public Page<DemoScore> paginationScore(ScorePageQry pageQry){
         return this.baseMapper.selectPage(new Page<>(pageQry.getCurrent(),pageQry.getSize()), 

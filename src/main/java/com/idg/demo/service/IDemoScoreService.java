@@ -6,6 +6,6 @@ import com.idg.demo.domain.DemoScore;
 import com.idg.demo.domain.dto.ScorePageQry;
 import com.idg.demo.domain.vo.StudentScoreVO;
 
-public interface IDemoScore extends IService<DemoScore>{
+public interface IDemoScoreService extends IService<DemoScore>{
     public Page<StudentScoreVO> voPagination(ScorePageQry pageQry);
 }
