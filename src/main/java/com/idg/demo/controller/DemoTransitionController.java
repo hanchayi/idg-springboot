@@ -1,21 +1,18 @@
 package com.idg.demo.controller;
-
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.idg.demo.domain.DemoScore;
-import com.idg.demo.service.IDemoScoreService;
+import com.idg.demo.service.IDemoTransitionService;
 
 @RestController
 public class DemoTransitionController {
 
 	@Autowired
-	private IDemoScoreService demoScore;
+	private IDemoTransitionService demoTransitionService;
 
 	@GetMapping("/demo-transition")
-	public List<DemoScore> demoTransition() {
-       return demoScore.list();
+	public boolean demoTransition() {
+    	demoTransitionService.test();
+		return true;
 	}
 }
