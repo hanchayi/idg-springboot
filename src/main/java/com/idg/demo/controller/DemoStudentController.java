@@ -21,7 +21,7 @@ public class DemoStudentController {
 	private IDemoStudent userDemoStudent;
 
 	@GetMapping("/demo-students")
-	public List<DemoStudent> getDemoStudents() {
+	public List<DemoStudent> allDemoStudents() {
        return userDemoStudent.list();
 	}
 
