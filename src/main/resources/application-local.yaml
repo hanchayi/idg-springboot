@@ -10,6 +10,10 @@ spring:
     #password: 123456
     #url: jdbc:mysql://localhost:3306/idg?useUnicode=true&characterEncoding=UTF-8&useSSL=true&verifyServerCertificate=false
     type: com.alibaba.druid.pool.DruidDataSource
+  liquibase:
+    change-log: classpath:changelog/changelog.sql
+    enabled: true
+    clear-checksums: true
   servlet:
     multipart:
       max-file-size: 128KB
