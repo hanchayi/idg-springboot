@@ -39,3 +39,6 @@ https://developer.aliyun.com/mvn/search
 
 ## 注册登陆
 https://juejin.cn/post/6992562025318760461#heading-4
+
+## 验证码
+https://gitee.com/ramostear/Happy-Captcha?_from=gitee_search#67-%E9%93%BE%E5%BC%8F%E8%B0%83%E7%94%A8
