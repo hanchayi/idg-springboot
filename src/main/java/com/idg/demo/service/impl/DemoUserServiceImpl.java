@@ -1,5 +1,6 @@
 package com.idg.demo.service.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
@@ -13,11 +14,16 @@ import com.idg.demo.service.IDemoUserService;
 @Service
 @Primary
 public class DemoUserServiceImpl extends ServiceImpl<DemoUserMapper,DemoUser> implements IDemoUserService  {
+    @Autowired
+    public DemoUserMapper demoUserMapper;
+
     public boolean register(DemoUser user) {
         QueryWrapper<DemoUser> queryWrapper = new QueryWrapper<>();
         queryWrapper.select("username", "password").eq("username", user.getUsername());
-        DemoUser finded = this.getOne(queryWrapper);
-
+        // DemoUser finded = this.getOne(queryWrapper);
+        // this.demoUserMapper.getOne(queryWrapper);
+        // this.demoUserMapper.deleteById("1");
+        DemoUser finded = this.demoUserMapper.selectOne(queryWrapper);
         if (finded != null) {
             throw new Error("has registered");
         }
