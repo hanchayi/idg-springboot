@@ -24,6 +24,10 @@ public class DemoUserServiceImpl extends ServiceImpl<DemoUserMapper,DemoUser> im
         // this.demoUserMapper.getOne(queryWrapper);
         // this.demoUserMapper.deleteById("1");
         DemoUser finded = this.demoUserMapper.selectOne(queryWrapper);
+        // int inserted = this.demoUserMapper.insert(user);
+        // int deleted = this.demoUserMapper.deleteById(1);
+        // int updated1 = this.demoUserMapper.update(user, queryWrapper);
+        // int updated2 = this.demoUserMapper.updateById(user);
         if (finded != null) {
             throw new Error("has registered");
         }
