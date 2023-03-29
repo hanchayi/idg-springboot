@@ -36,3 +36,6 @@
 
 ## maven仓库
 https://developer.aliyun.com/mvn/search
+
+## 注册登陆
+https://juejin.cn/post/6992562025318760461#heading-4
