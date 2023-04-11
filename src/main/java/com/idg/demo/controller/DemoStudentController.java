@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.idg.demo.domain.DemoStudent;
 import com.idg.demo.service.IDemoStudentService;
 
@@ -23,6 +24,11 @@ public class DemoStudentController {
 	@GetMapping("/demo-students")
 	public List<DemoStudent> allDemoStudents() {
        return userDemoStudent.list();
+	}
+
+	@GetMapping("/demo-students-page")
+	public Page<DemoStudent> allDemoStudentsPage() {
+       return userDemoStudent.pageList("a");
 	}
 
 	@GetMapping("/demo-students/{id}")
