@@ -1,5 +1,7 @@
 package com.idg.demo.mapper;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Param;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
@@ -10,4 +12,6 @@ import com.idg.demo.domain.vo.StudentScoreVO;
 public interface DemoScoreMapper extends BaseMapper<DemoScore> {
     
     public Page<StudentScoreVO> selectVOPage(Page<DemoScore> page,@Param("searchKey") String searchKey);
+
+    public void batchInsert(List<DemoScore >list);
 }

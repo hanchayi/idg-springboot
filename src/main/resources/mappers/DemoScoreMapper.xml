@@ -19,4 +19,12 @@
             </where>
     </select>
 
+    <insert id="batchInsert">
+        INSERT INTO demo_score(score,demo_student_id)
+        VALUES 
+        <foreach collection="list" item="item" separator=",">
+            (#{item.score},#{item.demoStudentId})
+        </foreach>
+    </insert>
+
 </mapper>
